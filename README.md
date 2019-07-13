@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+## CAP Appliance
 
-You can use the [editor on GitHub](https://github.com/SemwebServices/cap_appliance/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Welcome to the Documentation site for the "CAP Appliance". CAP Appliance is a pre-configured
+build of CAP tools designed to work together so organisations wishing to draft, publish,
+consume and aggregate CAP Alerts can do so in just a few clicks.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### CAP Appliance on AWS
 
-### Markdown
+CAP Applicance is made available as an AMI on Amazon Marketplace. All the tools composing the
+CAP Applicance are open source licensed, and the distribution is made available without support
+or warranty. A small fee is made for using the image, and all funds generated will go back into
+the maintenance and development of the toolkit.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Although no formal SLA or support is available, community support is available and users are welcome to
+submit issues to [The CAP Appliance Issue Tracker](https://github.com/SemwebServices/cap_appliance/issues)
 
-```markdown
-Syntax highlighted code block
+### Using the CAP Appliance
 
-# Header 1
-## Header 2
-### Header 3
+#### Considerations before you launch a new CAP Appliance
 
-- Bulleted
-- List
+This image is intended as a quick-start for developers and organisations wishing to trial the CAP Collator and Feed aggregation systems. It is intended for
+testing and development use. The components all support cluster deployment over multiple availability zones. If you wish to run production emergency alerting
+systems you are strongly encouraged to engage the CAP community for support in planning and implementing your system. This system is not intended for
+production use in life critial situations, and the tooling is not yet been certified for that use.
 
-1. Numbered
-2. List
+These instructions are provided for a bare bones install. You may want to think about fronting these applications with an AWS Elastic Load Balancer, https termination
+and a proper DNS setup. Setting up these things before proceeding will save you headaches later on. That said, you can launch as many copies and versions of the image
+as you like, so setting up a disposable test system just to try the system is entirely fine.
 
-**Bold** and _Italic_ and `Code` text
+#### navigate to the CAP Appliance on AWS Marketplace
 
-[Link](url) and ![Image](src)
-```
+#### Launch a new instance (We suggest a M5.large as a minimum)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### Visit http://your-instance-ip/CAPCollator/setup to initialise the CAP Collator
 
-### Jekyll Themes
+#### Visit http://your-instance-ip/feedFacade/setup to initialise and setup the FeedFacade app
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SemwebServices/cap_appliance/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### Load the default subscriptions
 
-### Support or Contact
+#### Set up a webhook
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### Enable one or more feeds
+
+#### Use the system
